@@ -1,0 +1,31 @@
+@extends('layouts.app')
+
+@section('content')
+    <livewire:discounth.edit
+        :discountStores="$discountStores"
+        :discountsh="$discountsh"
+        :stocks="$stocks"
+        :stores="$stores"
+        :buyStockTypes="$buyStockTypes"
+        :notBuyStockTypes="$notBuyStockTypes"
+        :winStockTypes="$winStockTypes"
+        :notWinStockTypes="$notWinStockTypes"
+        :buyingTypes="$buyingTypes"
+        :winningTypes="$winningTypes"
+        :discountTypes="$discountTypes"
+        :repeatedTypes="$repeatedTypes"
+        :manualTypes="$manualTypes"
+        :manualInputTypes="$manualInputTypes"
+        :buyLinesWithDiscTypes="$buyLinesWithDiscTypes"
+        :winLinesWithDiscTypes="$winLinesWithDiscTypes"
+        :addDiscountTypes="$addDiscountTypes"
+        :buyLinesForBidDiscTypes="$buyLinesForBidDiscTypes"
+        :winLinesForBidDiscTypes="$winLinesForBidDiscTypes"
+        :printMessageTypes="$printMessageTypes"
+        :repeatTypes="$repeatTypes"
+
+        :barcodes="$barcodes"
+        :actionTypes="$actionTypes"
+        :allDiscountsd="$allDiscountsd"
+    />
+@endsection

@@ -1,0 +1,83 @@
+<?php
+
+namespace App\Models;
+
+use App\Traits\IdToUppercase;
+use Illuminate\Database\Eloquent\Model;
+use App\Traits\UpdateCreatedModifiedUserIdColumns;
+
+class ProductionGroup extends Model
+{
+    use IdToUppercase, UpdateCreatedModifiedUserIdColumns;
+
+    protected $table = 't_productiongroup';
+
+    protected $perPage = 500;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'f_id',
+        'f_name',
+        'f_name2',
+        'f_templateid1',
+        'f_templateid2',
+        'f_system1',
+        'f_system2',
+        'f_system3',
+    ];
+
+    /**
+     * The primary key for the model.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'f_id';
+
+    /**
+     * The "type" of the primary key ID.
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false;
+
+    /**
+     * The name of the "created at" column.
+     *
+     * @var string|null
+     */
+    const CREATED_AT = 'f_create_date';
+
+    /**
+     * The name of the "updated at" column.
+     *
+     * @var string|null
+     */
+    const UPDATED_AT = 'f_modified_date';
+
+    /**
+     * Get the budget's template1.
+     */
+    public function template1()
+    {
+        return $this->hasOne(Template::class, 'f_id', 'f_templateid1');
+    }
+
+    /**
+     * Get the budget's template2.
+     */
+    public function template2()
+    {
+        return $this->hasOne(Template::class, 'f_id', 'f_templateid2');
+    }
+}

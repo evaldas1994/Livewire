@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'h1' => 'Gamyba',
+    'f_id' => 'Kodas',
+    'f_product' => 'Gamybinė kortelė',
+    'f_quant' => 'Kiekis',
+    'f_bomid' => 'Gamybinė kortelė',
+    'f_description' => 'Aprašymas',
+    'f_r1id' => 'Registras 1',
+    'f_r2id' => 'Registras 2',
+    'f_r3id' => 'Registras 3',
+    'f_r4id' => 'Registras 4',
+    'f_r5id' => 'Registras 5',
+    'f_f1' => 'Laukas 1',
+    'f_f2' => 'Laukas 2',
+    'f_f3' => 'Laukas 3',
+    'f_f4' => 'Laukas 4',
+    'f_f5' => 'Laukas 5',
+    'f_storeid' => 'Sandėlis',
+    'f_system1' => 'Sistema1',
+    'f_system2' => 'Sistema2',
+    'f_system3' => 'Sistema3',
+    'f_create_userid' => 'Sukūrė vartotojas',
+    'f_create_date' => 'Sukūrimo data',
+    'f_modified_userid' => 'Redagavo vartotojas',
+    'f_modified_date' => 'Redagavimo data',
+];

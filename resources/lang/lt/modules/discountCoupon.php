@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'h1' => 'Dovanų kuponai',
+    'f_id' => 'Kodas',
+    'f_activation_date' => 'Data',
+    'f_activation_docno' => 'Dok. nr.',
+    'f_activation_partnerid' => 'Op. nr.',
+    'f_activation_storeid' => 'Filialas',
+    'f_active' => 'Aktyvus?',
+    'f_nominal' => 'Dovanų kupono nominalas',
+    'f_sale_date' => 'Data',
+    'f_sale_docno' => 'Dok. nr.',
+    'f_sale_partnerid' => 'Op. nr.',
+    'f_sale_storeid' => 'Filialas',
+    'f_sale_sum' => 'Pard. suma',
+    'f_valid_days' => 'Galioja dienų',
+    'f_valid_till' => 'Galioja iki',
+    'f_system1' => 'Sistema1',
+    'f_system2' => 'Sistema2',
+    'f_system3' => 'Sistema3',
+    'f_create_userid' => 'Sukūrė vartotojas',
+    'f_create_date' => 'Sukūrimo data',
+    'f_modified_userid' => 'Redagavo vartotojas',
+    'f_modified_date' => 'Redagavimo data',
+];

@@ -1,0 +1,58 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Traits\IdToUppercase;
+use App\Traits\UpdateCreatedModifiedUserIdColumns;
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+     use IdToUppercase, UpdateCreatedModifiedUserIdColumns;
+
+        protected $table = 'table-name';
+
+        /**
+         * The attributes that are mass assignable.
+         *
+         * @var array
+         */
+        protected $fillable = [
+            'f_id',
+        ];
+
+        /**
+         * The primary key for the model.
+         *
+         * @var string
+         */
+        protected $primaryKey = 'f_id';
+
+        /**
+         * The "type" of the primary key ID.
+         *
+         * @var string
+         */
+        protected $keyType = 'string';
+
+        /**
+         * Indicates if the IDs are auto-incrementing.
+         *
+         * @var bool
+         */
+        public $incrementing = false;
+
+        /**
+         * The name of the "created at" column.
+         *
+         * @var string|null
+         */
+        const CREATED_AT = 'f_create_date';
+
+        /**
+         * The name of the "updated at" column.
+         *
+         * @var string|null
+         */
+        const UPDATED_AT = 'f_modified_date';
+}
