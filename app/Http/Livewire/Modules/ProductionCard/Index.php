@@ -53,20 +53,15 @@ class Index extends Component
             ->section('content');
     }
 
-    public function setFStockid($id)
-    {
-        $this->emitTo('modules.production-card.create', 'setFStockid', $id);
-    }
-
     public function delete($id)
     {
         try {
             ProductionCardModel::findOrFail($id)->delete();
             session()->flash('success', __('global.deleted_successfully'));
-            $this->emitTo('modules.production-card.index', 'refreshComponent');
+            $this->emit('refreshComponent');
         } catch (\Exception) {
             session()->flash('error', __('global.delete_failed'));
-            $this->emitTo('modules.production-card.index', 'refreshComponent');
+            $this->emit('refreshComponent');
         }
     }
 

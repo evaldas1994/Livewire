@@ -156,8 +156,10 @@ class Edit extends Component
     {
         if (gettype($productionCard) === 'array') {
             $this->productionCard = new ProductionCardModel($productionCard);
+//            dd('hit', $this->productionCard);
         }elseif (gettype($productionCard) === 'string') {
             $this->productionCard = ProductionCardModel::findOrFail($productionCard)->load(['stock', 'components']);
+//            dd($this->productionCard);
         }else{
             dd($this->productionCard);
             return;
@@ -192,11 +194,12 @@ class Edit extends Component
         $data = Arr::add($data, 'from.component.form.target', $name);
         $data = Arr::add($data, 'from.page', $this->page);
         $data = Arr::add($data, 'from.tab', $this->tab);
-        $data = Arr::add($data, 'from.data', $this->getData());
+        $data = Arr::add($data, 'from.data', $this->productionCard);
+        $data = Arr::add($data, 'from.oldData', $this->getData());
         $data = Arr::add($data, 'from.popup', null);
 
         // išsiunčiamas eventas naujo komponento įjungimui
-        $this->emitUp(Str::camel('show_' . $name), true, $data);
+        $this->emit(Str::camel('show_' . $name), true, $data);
     }
 
     //tab

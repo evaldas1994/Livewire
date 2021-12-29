@@ -59,7 +59,7 @@ class Autocomplete extends Component
 
     public function select($id, $name)
     {
-        $this->emitUp(Str::camel('set_' . $this->inputName), $id);
+        $this->emit(Str::camel('set_' . $this->inputName), $id);
 
         $this->search = $id;
         $this->searchShowName = $name;
@@ -97,8 +97,8 @@ class Autocomplete extends Component
             ->get();
     }
 
-    public function clickSearchButton($name = null)
-    {
-        $this->emitUp('clickSearchButton', $this->inputName);
-    }
+//    public function clickSearchButton($name = null)
+//    {
+//        $this->emit('clickSearchButton', $this->inputName);
+//    }
 }

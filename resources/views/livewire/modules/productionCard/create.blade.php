@@ -14,7 +14,7 @@
             </button>
 
             <button
-                wire:click="close('setPage', 'index')"
+                wire:click="$emit('setPage', 'index')"
                 type="button"
                 class="btn btn-dark"
             >

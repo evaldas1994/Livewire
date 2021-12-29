@@ -19,7 +19,8 @@
         <livewire:modules.production-card-component.edit :tab="$tab" :productionCard="$productionCard" :productionCardComponent="$productionCardComponent"/>
     @endif
 
-    @if($showFStockid == true)
+    @if($showFStockid)
         <livewire:modules.stock.stock :tab="$tab" :oldData="$pageData" />
     @endif
+
 </div>

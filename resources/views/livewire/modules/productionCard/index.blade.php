@@ -60,14 +60,15 @@
                             <tr>
                                 @if(isset($groups[0]['items']) && count($groups[0]['items']) > 0)
                                     @foreach($groups[0]['items'] as $item)
-                                        <td class="{{ $clickStatus ? 'cursor-pointer' : ''}}"
-                                            wire:click="setFStockid('{{ $card->{$item['name']} }}')">{{ $card->{$item['name']} }}</td>
+                                        <td class="{{ $clickStatus ? 'cursor-pointer' : ''}}">
+                                            {{ $card->{$item['name']} }}
+                                        </td>
                                     @endforeach
                                 @endif
 
                                 <td class="table-action">
                                     <button
-                                        wire:click="$emitUp('setPage', 'edit', '{{ $card->f_id }}')"
+                                        wire:click="$emit('setPage', 'edit', '{{ $card->f_id }}')"
                                         type="button"
                                         class="btn my-0 py-0"
                                     >

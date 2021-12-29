@@ -73,20 +73,15 @@ class Create extends Component
         $this->save();
 
         session()->flash('success', __('global.created_successfully'));
-        $this->emitUp('setPage', 'index');
+        $this->emit('setPage', 'index');
     }
 
     public function storeAndRedirect()
     {
         $this->save();
 
-        $this->emitUp('setPage', 'edit', $this->f_id);
-        $this->emitUp('showPopupCreate', true);
-    }
-
-    public function close()
-    {
-        $this->emitUp('setPage', 'index');
+        $this->emit('setPage', 'edit', $this->f_id);
+        $this->emit('showPopupCreate', true);
     }
 
     public function save()
@@ -186,14 +181,14 @@ class Create extends Component
         $data = Arr::add($data, 'from.popup', null);
 
         // išsiunčiamas eventas naujo komponento įjungimui
-        $this->emitUp(Str::camel('show_' . $name), true, $data);
+        $this->emit(Str::camel('show_' . $name), true, $data);
     }
 
     //tab
     public function setTab($tab)
     {
         $this->tab = $tab;
-        $this->emitUp('setTab', $tab);
+        $this->emit('setTab', $tab);
     }
 
     //image

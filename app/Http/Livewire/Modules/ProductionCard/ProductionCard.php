@@ -25,7 +25,6 @@ class ProductionCard extends Component
 
     public function mount($productionCard=null, $productionCardComponent = null, $page='index', $tab=1, $popup=null, $oldData=null)
     {
-
         $this->productionCard = $productionCard;
         $this->page = $page;
         $this->oldData = $oldData;

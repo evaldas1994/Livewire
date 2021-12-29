@@ -6,7 +6,7 @@
 
         <div class="col-auto ms-auto text-end">
             <button
-                wire:click="update()"
+                wire:click="update"
                 type="button"
                 class="btn btn-primary"
             >

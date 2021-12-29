@@ -26,7 +26,7 @@
 
                 {{--  button  --}}
                 <button
-                    wire:click="clickSearchButton('{{ $inputName }}')"
+                    wire:click="$emitUp('clickSearchButton', '{{ $inputName }}')"
                     type="button"
                     class="input-group-text {{ Arr::get($params, 'additional_params.button.class') ?? '' }}"
                     {{ Arr::get($params, 'additional_params.button.hidden') ? 'hidden' : '' }}

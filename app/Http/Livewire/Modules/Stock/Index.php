@@ -52,6 +52,7 @@ class Index extends Component
 
     public function close()
     {
+//        dd($this->oldData);
         // išjungiamas stock komponentas
         $this->emitTo(
             Arr::get($this->oldData, 'from.component.name'),
@@ -73,7 +74,10 @@ class Index extends Component
                 Arr::get($this->oldData, 'from.component.event'),
                 Arr::get($this->oldData, 'from.data'),
                 null,
-                Arr::get($this->oldData, 'from.page')
+                Arr::get($this->oldData, 'from.page'),
+                Arr::get($this->oldData, 'from.tab'),
+                Arr::get($this->oldData, 'from.popup'),
+                Arr::get($this->oldData, 'from.oldData'),
             );
         }
 
